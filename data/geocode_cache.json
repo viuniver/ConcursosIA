@@ -1,0 +1,1022 @@
+{
+  "prefeitura de indaiatuba|sp|": {
+    "lat": -23.092297,
+    "lng": -47.2299063,
+    "fonte": "nominatim"
+  },
+  "prefeitura de porto feliz|sp|": {
+    "lat": -23.2134206,
+    "lng": -47.5236881,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sorocaba|sp|": {
+    "lat": -23.4833206,
+    "lng": -47.4777516,
+    "fonte": "nominatim"
+  },
+  "camara de barrinha|sp|": {
+    "lat": -21.1898849,
+    "lng": -48.1550642,
+    "fonte": "nominatim"
+  },
+  "camara de duartina|sp|": {
+    "lat": -22.414562,
+    "lng": -49.408355,
+    "fonte": "nominatim"
+  },
+  "camara de iepe|sp|": {
+    "lat": -22.660165,
+    "lng": -51.077881,
+    "fonte": "nominatim"
+  },
+  "camara de mongagua|sp|": {
+    "lat": -24.1011938,
+    "lng": -46.6353405,
+    "fonte": "nominatim"
+  },
+  "camara de sao jose do rio pardo|sp|": {
+    "lat": -21.4673139,
+    "lng": -47.0025184,
+    "fonte": "nominatim"
+  },
+  "camara de sarutaia|sp|": {
+    "lat": -23.2747217,
+    "lng": -49.477186,
+    "fonte": "nominatim"
+  },
+  "camara de sertaozinho|sp|": {
+    "lat": -21.1277909,
+    "lng": -48.0102781,
+    "fonte": "nominatim"
+  },
+  "camara de tabatinga|sp|": {
+    "lat": -21.7373768,
+    "lng": -48.6880522,
+    "fonte": "nominatim"
+  },
+  "camara de teodoro sampaio|sp|": {
+    "lat": -22.5300202,
+    "lng": -52.1686847,
+    "fonte": "nominatim"
+  },
+  "camara de torrinha|sp|": {
+    "lat": -22.4302536,
+    "lng": -48.1690653,
+    "fonte": "nominatim"
+  },
+  "conderg - consorcio de desenvolvimento da regiao de sao joao da boa vista|sp|": {
+    "lat": -21.7732004,
+    "lng": -47.0849051,
+    "fonte": "nominatim"
+  },
+  "conderg - farmaceutico e auxiliar de servicos|sp|": {
+    "lat": -23.5854767,
+    "lng": -46.6820218,
+    "fonte": "nominatim"
+  },
+  "eesc-usp - escola de engenharia de sao carlos|sp|": {
+    "lat": -21.9900212,
+    "lng": -47.8765396,
+    "fonte": "nominatim"
+  },
+  "camara de arapoti|pr|": {
+    "lat": -24.1431068,
+    "lng": -49.8233233,
+    "fonte": "nominatim"
+  },
+  "camara de ceu azul|pr|": {
+    "lat": -25.1484973,
+    "lng": -53.8494214,
+    "fonte": "nominatim"
+  },
+  "camara de pitangueiras|pr|": {
+    "lat": -23.2313428,
+    "lng": -51.587301,
+    "fonte": "nominatim"
+  },
+  "cis 5ª rs - consorcio intermunicipal de saude|pr|": {
+    "lat": -10.9417631,
+    "lng": -40.4189409,
+    "fonte": "nominatim"
+  },
+  "crc pr - conselho regional de contabilidade do parana|pr|": {
+    "lat": -25.4272434,
+    "lng": -49.2452443,
+    "fonte": "nominatim"
+  },
+  "ifpr - instituto federal do parana|pr|": {
+    "lat": -23.2754525,
+    "lng": -51.1638944,
+    "fonte": "nominatim"
+  },
+  "prefeitura de assis chateaubriand|pr|": {
+    "lat": -24.4049544,
+    "lng": -53.5055649,
+    "fonte": "nominatim"
+  },
+  "prefeitura de balsa nova|pr|": {
+    "lat": -25.5805769,
+    "lng": -49.6295242,
+    "fonte": "nominatim"
+  },
+  "prefeitura de catanduvas|pr|": {
+    "lat": -25.2043528,
+    "lng": -53.154826,
+    "fonte": "nominatim"
+  },
+  "prefeitura de fernandes pinheiro|pr|": {
+    "lat": -25.4148066,
+    "lng": -50.5489837,
+    "fonte": "nominatim"
+  },
+  "prefeitura de guaraci|pr|": {
+    "lat": -22.970394,
+    "lng": -51.6479769,
+    "fonte": "nominatim"
+  },
+  "prefeitura de itaperucu|pr|": {
+    "lat": -25.2247413,
+    "lng": -49.3540825,
+    "fonte": "nominatim"
+  },
+  "prefeitura de marechal candido rondon|pr|": {
+    "lat": -24.5581804,
+    "lng": -54.0591475,
+    "fonte": "nominatim"
+  },
+  "prefeitura de mariopolis|pr|": {
+    "lat": -26.352811,
+    "lng": -52.5589218,
+    "fonte": "nominatim"
+  },
+  "prefeitura de ouro verde do oeste|pr|": {
+    "lat": -24.7741302,
+    "lng": -53.906938,
+    "fonte": "nominatim"
+  },
+  "prefeitura de pato bragado|pr|": {
+    "lat": -24.6254428,
+    "lng": -54.2252325,
+    "fonte": "nominatim"
+  },
+  "prefeitura de planalto|pr|": {
+    "lat": -18.0941342,
+    "lng": -40.5172306,
+    "fonte": "nominatim"
+  },
+  "prefeitura de prudentopolis|pr|": {
+    "lat": -25.2148634,
+    "lng": -50.9813115,
+    "fonte": "nominatim"
+  },
+  "prefeitura de rolandia|pr|": {
+    "lat": -23.3150258,
+    "lng": -51.3663439,
+    "fonte": "nominatim"
+  },
+  "prefeitura de santa isabel do ivai|pr|": {
+    "lat": -23.0013818,
+    "lng": -53.1940876,
+    "fonte": "nominatim"
+  },
+  "prefeitura de santa lucia|pr|": {
+    "lat": -19.733708,
+    "lng": -45.2513022,
+    "fonte": "nominatim"
+  },
+  "cge - controladoria geral do estado de alagoas|al|": {
+    "lat": -23.3178681,
+    "lng": -51.1690366,
+    "fonte": "nominatim"
+  },
+  "pmal - policia militar do estado de alagoas|al|": {
+    "lat": -23.3178681,
+    "lng": -51.1690366,
+    "fonte": "nominatim"
+  },
+  "prefeitura de delmiro gouveia|al|": {
+    "lat": -9.385892,
+    "lng": -37.998256,
+    "fonte": "nominatim"
+  },
+  "prefeitura de maceio|al|": {
+    "lat": -9.6729963,
+    "lng": -35.7218796,
+    "fonte": "nominatim"
+  },
+  "uneal - universidade estadual de alagoas|al|": {
+    "lat": -9.4352202,
+    "lng": -36.6429179,
+    "fonte": "nominatim"
+  },
+  "adab - agencia estadual de defesa agropecuaria da bahia|ba|": {
+    "lat": -13.2637558,
+    "lng": -43.4119744,
+    "fonte": "nominatim"
+  },
+  "cisrp - consorcio de saude da regiao de paulo afonso|ba|": {
+    "lat": -10.4213656,
+    "lng": -38.8687287,
+    "fonte": "nominatim"
+  },
+  "fesf-sus - fundacao estatal saude da familia|ba|": {
+    "lat": -13.5814419,
+    "lng": -38.9283155,
+    "fonte": "nominatim"
+  },
+  "prefeitura de barra do choca|ba|": {
+    "lat": -14.8618118,
+    "lng": -40.5787854,
+    "fonte": "nominatim"
+  },
+  "prefeitura de gaviao|ba|": {
+    "lat": -11.4714303,
+    "lng": -39.7826316,
+    "fonte": "nominatim"
+  },
+  "prefeitura de santa maria da vitoria|ba|": {
+    "lat": -13.3845191,
+    "lng": -44.1913578,
+    "fonte": "nominatim"
+  },
+  "ufob - universidade federal do oeste da bahia|ba|": {
+    "lat": -11.0870934,
+    "lng": -43.143363,
+    "fonte": "nominatim"
+  },
+  "prefeitura de baturite|ce|": {
+    "lat": -4.3290203,
+    "lng": -38.8821055,
+    "fonte": "nominatim"
+  },
+  "camara de aracati|ce|": {
+    "lat": -4.7525796,
+    "lng": -37.5377334,
+    "fonte": "nominatim"
+  },
+  "camara de beberibe|ce|": {
+    "lat": -4.4386787,
+    "lng": -38.0166179,
+    "fonte": "nominatim"
+  },
+  "prefeitura de alto santo|ce|": {
+    "lat": -5.5210624,
+    "lng": -38.2710609,
+    "fonte": "nominatim"
+  },
+  "prefeitura de cascavel|ce|": {
+    "lat": -24.2935091,
+    "lng": -53.3104365,
+    "fonte": "nominatim"
+  },
+  "prefeitura de guaiuba|ce|": {
+    "lat": -4.0412656,
+    "lng": -38.6369079,
+    "fonte": "nominatim"
+  },
+  "prefeitura de guaraciaba do norte|ce|": {
+    "lat": -4.1618749,
+    "lng": -40.7525379,
+    "fonte": "nominatim"
+  },
+  "prefeitura de jati|ce|": {
+    "lat": -7.6894344,
+    "lng": -39.006074,
+    "fonte": "nominatim"
+  },
+  "prefeitura de monsenhor tabosa|ce|": {
+    "lat": -4.786487,
+    "lng": -40.0761433,
+    "fonte": "nominatim"
+  },
+  "prefeitura de morada nova|ce|": {
+    "lat": -5.1125155,
+    "lng": -38.3680549,
+    "fonte": "nominatim"
+  },
+  "prefeitura de paracuru|ce|": {
+    "lat": -3.4088264,
+    "lng": -39.0297579,
+    "fonte": "nominatim"
+  },
+  "seduc - secretaria da educacao do ceara|ce|": {
+    "lat": -3.74495,
+    "lng": -38.4967378,
+    "fonte": "nominatim"
+  },
+  "ufma - universidade federal do maranhao|ma|": {
+    "lat": -5.5278217,
+    "lng": -47.4878769,
+    "fonte": "nominatim"
+  },
+  "camara de joao lisboa|ma|": {
+    "lat": -5.44363,
+    "lng": -47.406388,
+    "fonte": "nominatim"
+  },
+  "ifma - instituto federal do maranhao (coelho neto)|ma|": {
+    "lat": -4.2693653,
+    "lng": -43.0258275,
+    "fonte": "nominatim"
+  },
+  "ifma - instituto federal do maranhao (pinheiro)|ma|": {
+    "lat": -2.5408607,
+    "lng": -45.1336358,
+    "fonte": "nominatim"
+  },
+  "ifma - instituto federal do maranhao (ze doca)|ma|": {
+    "lat": -3.2843766,
+    "lng": -45.653666,
+    "fonte": "nominatim"
+  },
+  "prefeitura de caxias|ma|": {
+    "lat": -4.8622339,
+    "lng": -43.3637791,
+    "fonte": "nominatim"
+  },
+  "prefeitura de humberto de campos|ma|": {
+    "lat": -2.598282,
+    "lng": -43.464877,
+    "fonte": "nominatim"
+  },
+  "prefeitura de presidente sarney|ma|": {
+    "lat": -2.5907563,
+    "lng": -45.3623652,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sao mateus do maranhao|ma|": {
+    "lat": -4.0391944,
+    "lng": -44.4700438,
+    "fonte": "nominatim"
+  },
+  "saae - acailandia ma|ma|": {
+    "lat": -4.8787743,
+    "lng": -47.7678645,
+    "fonte": "nominatim"
+  },
+  "prefeitura de itabaiana|pb|": {
+    "lat": -7.2895992,
+    "lng": -35.6103557,
+    "fonte": "nominatim"
+  },
+  "prefeitura de itatuba|pb|": {
+    "lat": -7.3758509,
+    "lng": -35.626495,
+    "fonte": "nominatim"
+  },
+  "prefeitura de uirauna|pb|": {
+    "lat": -6.5211948,
+    "lng": -38.4109929,
+    "fonte": "nominatim"
+  },
+  "uepb - universidade estadual da paraiba|pb|": {
+    "lat": -7.8925229,
+    "lng": -37.1267614,
+    "fonte": "nominatim"
+  },
+  "prefeitura de limoeiro|pe|": {
+    "lat": -7.8805437,
+    "lng": -35.4565083,
+    "fonte": "nominatim"
+  },
+  "prefeitura de cumaru|pe|": {
+    "lat": -8.0083415,
+    "lng": -35.7009081,
+    "fonte": "nominatim"
+  },
+  "prefeitura de olinda|pe|": {
+    "lat": -8.0183793,
+    "lng": -34.8523721,
+    "fonte": "nominatim"
+  },
+  "ifpi - instituto federal do piaui|pi|": {
+    "lat": -8.3622109,
+    "lng": -42.2542933,
+    "fonte": "nominatim"
+  },
+  "prefeitura de lagoa do piaui|pi|": {
+    "lat": -8.48207,
+    "lng": -41.5312004,
+    "fonte": "nominatim"
+  },
+  "prefeitura de piracuruca|pi|": {
+    "lat": -3.9304804,
+    "lng": -41.7150099,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sao pedro do piaui|pi|": {
+    "lat": -5.9272632,
+    "lng": -42.7203392,
+    "fonte": "nominatim"
+  },
+  "prefeitura de simoes|pi|": {
+    "lat": -7.5954612,
+    "lng": -40.8194876,
+    "fonte": "nominatim"
+  },
+  "codern - companhia docas do rio grande do norte|rn|": {
+    "lat": -4.9596083,
+    "lng": -37.1376743,
+    "fonte": "nominatim"
+  },
+  "ifrn - instituto federal do rio grande do norte|rn|": {
+    "lat": -6.0558373,
+    "lng": -37.0344055,
+    "fonte": "nominatim"
+  },
+  "pge - procuradoria-geral do estado do rio grande do norte|rn|": {
+    "lat": -5.203997,
+    "lng": -37.3179515,
+    "fonte": "nominatim"
+  },
+  "pm - policia militar do rio grande do norte|rn|": {
+    "lat": -5.8660453,
+    "lng": -35.1809831,
+    "fonte": "nominatim"
+  },
+  "prefeitura de alexandria|rn|": {
+    "lat": -6.4126972,
+    "lng": -38.0164749,
+    "fonte": "nominatim"
+  },
+  "sead - secretaria de estado da administracao do rn|rn|": {
+    "lat": -5.830085,
+    "lng": -35.2154167,
+    "fonte": "nominatim"
+  },
+  "ufrn - universidade federal do rio grande do norte|rn|": {
+    "lat": -5.8377994,
+    "lng": -35.2039783,
+    "fonte": "nominatim"
+  },
+  "crefito-17 - conselho regional de fisioterapia e terapia ocupacional|se|": {
+    "lat": -23.5670504,
+    "lng": -46.7410828,
+    "fonte": "nominatim"
+  },
+  "pcdf - policia civil do distrito federal|df|": {
+    "lat": -15.8389545,
+    "lng": -47.8682554,
+    "fonte": "nominatim"
+  },
+  "camara de mara rosa|go|": {
+    "lat": -14.0148159,
+    "lng": -49.1776521,
+    "fonte": "nominatim"
+  },
+  "camara de senador canedo|go|": {
+    "lat": -16.7013233,
+    "lng": -49.0914921,
+    "fonte": "nominatim"
+  },
+  "ifg - instituto federal de goias (formosa)|go|": {
+    "lat": -15.5622269,
+    "lng": -47.3277203,
+    "fonte": "nominatim"
+  },
+  "ifg - instituto federal de goias (goiania)|go|": {
+    "lat": -16.6657951,
+    "lng": -49.2550868,
+    "fonte": "nominatim"
+  },
+  "prefeitura de aguas lindas de goias|go|": {
+    "lat": -15.7541347,
+    "lng": -48.2620448,
+    "fonte": "nominatim"
+  },
+  "prefeitura de apore|go|": {
+    "lat": -18.9642193,
+    "lng": -51.92804,
+    "fonte": "nominatim"
+  },
+  "prefeitura de aragarcas|go|": {
+    "lat": -15.8957166,
+    "lng": -52.2514538,
+    "fonte": "nominatim"
+  },
+  "prefeitura de buritinopolis|go|": {
+    "lat": -14.4575047,
+    "lng": -46.4310297,
+    "fonte": "nominatim"
+  },
+  "prefeitura de caturai|go|": {
+    "lat": -16.4473559,
+    "lng": -49.4919149,
+    "fonte": "nominatim"
+  },
+  "prefeitura de firminopolis|go|": {
+    "lat": -16.5753264,
+    "lng": -50.3011286,
+    "fonte": "nominatim"
+  },
+  "prefeitura de flores de goias|go|": {
+    "lat": -14.4500066,
+    "lng": -47.0473454,
+    "fonte": "nominatim"
+  },
+  "prefeitura de hidrolandia|go|": {
+    "lat": -16.9671342,
+    "lng": -49.22826,
+    "fonte": "nominatim"
+  },
+  "prefeitura de maurilandia|go|": {
+    "lat": -17.9718589,
+    "lng": -50.3388361,
+    "fonte": "nominatim"
+  },
+  "prefeitura de novo brasil|go|": {
+    "lat": -13.7705067,
+    "lng": -50.2878587,
+    "fonte": "nominatim"
+  },
+  "prefeitura de rio verde|go|": {
+    "lat": -17.8179678,
+    "lng": -50.9083756,
+    "fonte": "nominatim"
+  },
+  "prefeitura de serranopolis|go|": {
+    "lat": -18.3084565,
+    "lng": -51.9569462,
+    "fonte": "nominatim"
+  },
+  "prefeitura de simolandia|go|": {
+    "lat": -14.4733312,
+    "lng": -46.4832791,
+    "fonte": "nominatim"
+  },
+  "ufcat - universidade federal de catalao|go|": {
+    "lat": -18.1550651,
+    "lng": -47.9293141,
+    "fonte": "nominatim"
+  },
+  "camara de bandeirantes|ms|": {
+    "lat": -23.0267409,
+    "lng": -43.490114,
+    "fonte": "nominatim"
+  },
+  "ifms - instituto federal de mato grosso do sul|ms|": {
+    "lat": -19.0118594,
+    "lng": -57.6403689,
+    "fonte": "nominatim"
+  },
+  "prefeitura de bandeirantes|ms|": {
+    "lat": -19.9179623,
+    "lng": -54.3646768,
+    "fonte": "nominatim"
+  },
+  "prefeitura de campo grande|ms|": {
+    "lat": -20.4614242,
+    "lng": -54.6055177,
+    "fonte": "nominatim"
+  },
+  "ufms - universidade federal de mato grosso do sul|ms|": {
+    "lat": -20.5045696,
+    "lng": -54.6135483,
+    "fonte": "nominatim"
+  },
+  "camara de peixoto de azevedo|mt|": {
+    "lat": -9.9512647,
+    "lng": -54.9126137,
+    "fonte": "nominatim"
+  },
+  "mpmt - ministerio publico do estado de mato grosso|mt|": {
+    "lat": -15.2326588,
+    "lng": -59.3233986,
+    "fonte": "nominatim"
+  },
+  "pjc/mt - policia judiciaria civil do estado de mato grosso|mt|": {
+    "lat": -15.662973,
+    "lng": -55.9730687,
+    "fonte": "nominatim"
+  },
+  "prefeitura de aripuana|mt|": {
+    "lat": -10.175806,
+    "lng": -59.4439663,
+    "fonte": "nominatim"
+  },
+  "prefeitura de cocalinho|mt|": {
+    "lat": -14.390339,
+    "lng": -51.00015,
+    "fonte": "nominatim"
+  },
+  "prefeitura de cotriguacu|mt|": {
+    "lat": -9.9052345,
+    "lng": -58.5701594,
+    "fonte": "nominatim"
+  },
+  "prefeitura de juara|mt|": {
+    "lat": -11.2528848,
+    "lng": -57.5111036,
+    "fonte": "nominatim"
+  },
+  "prefeitura de juruena|mt|": {
+    "lat": -10.3282716,
+    "lng": -58.4968918,
+    "fonte": "nominatim"
+  },
+  "prefeitura de peixoto de azevedo|mt|": {
+    "lat": -10.2452002,
+    "lng": -54.9919761,
+    "fonte": "nominatim"
+  },
+  "prefeitura de rio branco|mt|": {
+    "lat": -15.6660849,
+    "lng": -56.1319955,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sorriso|mt|": {
+    "lat": -12.5454349,
+    "lng": -55.7277326,
+    "fonte": "nominatim"
+  },
+  "ufam - universidade federal do amazonas|am|": {
+    "lat": -3.0896776,
+    "lng": -59.9632097,
+    "fonte": "nominatim"
+  },
+  "prefeitura de manaus|am|": {
+    "lat": -3.1023109,
+    "lng": -59.9743592,
+    "fonte": "nominatim"
+  },
+  "pge - procuradoria geral do estado do acre|ac|": {
+    "lat": -10.9329273,
+    "lng": -69.5660464,
+    "fonte": "nominatim"
+  },
+  "prefeitura de jordao|ac|": {
+    "lat": -9.1905396,
+    "lng": -71.9484803,
+    "fonte": "nominatim"
+  },
+  "icmbio - parauapebas pa|pa|": {
+    "lat": -6.0718127,
+    "lng": -49.9041893,
+    "fonte": "nominatim"
+  },
+  "prefeitura de xinguara|pa|": {
+    "lat": -7.0998514,
+    "lng": -49.9416632,
+    "fonte": "nominatim"
+  },
+  "semas - secretaria de meio ambiente do para|pa|": {
+    "lat": -6.6379004,
+    "lng": -51.9765107,
+    "fonte": "nominatim"
+  },
+  "ufpa - universidade federal do para|pa|": {
+    "lat": -1.4677334,
+    "lng": -48.4435021,
+    "fonte": "nominatim"
+  },
+  "icmbio - campo novo de rondonia|ro|": {
+    "lat": -11.8288875,
+    "lng": -61.315641,
+    "fonte": "nominatim"
+  },
+  "ifro - instituto federal de rondonia|ro|": {
+    "lat": -9.9494825,
+    "lng": -62.9626232,
+    "fonte": "nominatim"
+  },
+  "pmc - prefeitura de cacaulandia|ro|": {
+    "lat": -10.3380043,
+    "lng": -62.9007231,
+    "fonte": "nominatim"
+  },
+  "prefeitura de governador jorge teixeira|ro|": {
+    "lat": -10.6140224,
+    "lng": -62.7326412,
+    "fonte": "nominatim"
+  },
+  "prefeitura de porto velho|ro|": {
+    "lat": -8.7631202,
+    "lng": -63.9036343,
+    "fonte": "nominatim"
+  },
+  "unir - universidade federal de rondonia|ro|": {
+    "lat": -11.415669,
+    "lng": -61.4544015,
+    "fonte": "nominatim"
+  },
+  "prefeitura de bonfim|rr|": {
+    "lat": 3.3580908,
+    "lng": -59.8314028,
+    "fonte": "nominatim"
+  },
+  "ufnt - universidade federal do norte do tocantins|to|": {
+    "lat": -7.2337467,
+    "lng": -48.2450138,
+    "fonte": "nominatim"
+  },
+  "uft - universidade federal do tocantins|to|": {
+    "lat": -10.1785594,
+    "lng": -48.3597823,
+    "fonte": "nominatim"
+  },
+  "esfcex - escola de saude e formacao complementar do exercito|ba|": {
+    "lat": -12.9963984,
+    "lng": -38.455207,
+    "fonte": "nominatim"
+  },
+  "craisa - companhia regional de abastecimento integrado de santo andre|sp|": {
+    "lat": -23.059824165596044,
+    "lng": -48.23565558146251,
+    "fonte": "uf_centroid"
+  },
+  "dae - departamento de agua e esgoto de bauru|sp|": {
+    "lat": -23.185772066209136,
+    "lng": -48.50525483188306,
+    "fonte": "uf_centroid"
+  },
+  "cemmil - consorcio intermunicipal para desenvolvimento sustentavel|sp|": {
+    "lat": -22.616436811614232,
+    "lng": -48.69858272616134,
+    "fonte": "uf_centroid"
+  },
+  "cemmil - consorcio intermunicipal para desenvolvimento sustentavel (2)|sp|": {
+    "lat": -22.63499891349006,
+    "lng": -48.66626213686744,
+    "fonte": "uf_centroid"
+  },
+  "conderg - assistente social, psicologo, escriturario|sp|": {
+    "lat": -23.25348232278141,
+    "lng": -48.09951767721859,
+    "fonte": "uf_centroid"
+  },
+  "consorcio intermunicipal tres rios|sp|": {
+    "lat": -22.78663699536959,
+    "lng": -48.60572710200945,
+    "fonte": "uf_centroid"
+  },
+  "eesc-usp - escola de engenharia de sao carlos (telecomunicacoes)|sp|": {
+    "lat": -21.9900212,
+    "lng": -47.8765396,
+    "fonte": "nominatim"
+  },
+  "eesc-usp - escola de engenharia de sao carlos (transportes)|sp|": {
+    "lat": -21.9900212,
+    "lng": -47.8765396,
+    "fonte": "nominatim"
+  },
+  "prefeitura de chopinzinho (motorista)|pr|": {
+    "lat": -25.8566167,
+    "lng": -52.5294107,
+    "fonte": "nominatim"
+  },
+  "prefeitura de chopinzinho (assistente social)|pr|": {
+    "lat": -25.8566167,
+    "lng": -52.5294107,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sao jeronimo da serra (professores)|pr|": {
+    "lat": -23.7221275,
+    "lng": -50.7389164,
+    "fonte": "nominatim"
+  },
+  "prefeitura de sao jeronimo da serra (atendente)|pr|": {
+    "lat": -23.7221275,
+    "lng": -50.7389164,
+    "fonte": "nominatim"
+  },
+  "seplag - secretaria de estado do planejamento de alagoas|al|": {
+    "lat": -10.017996562658722,
+    "lng": -36.92723798735622,
+    "fonte": "uf_centroid"
+  },
+  "tjba - tribunal de justica do estado da bahia (juiz leigo)|ba|": {
+    "lat": -12.454135921790032,
+    "lng": -41.54557080770861,
+    "fonte": "uf_centroid"
+  },
+  "fesf-sus - fundacao estatal saude da familia (enfermeiros e medicos)|ba|": {
+    "lat": -13.5814419,
+    "lng": -38.9283155,
+    "fonte": "nominatim"
+  },
+  "icmbio - instituto chico mendes (monte pascoal ba)|ba|": {
+    "lat": -12.9822499,
+    "lng": -38.4812772,
+    "fonte": "nominatim"
+  },
+  "if baiano - instituto federal baiano (campus serrinha)|ba|": {
+    "lat": -12.549611568908288,
+    "lng": -41.52865864322286,
+    "fonte": "uf_centroid"
+  },
+  "if baiano - instituto federal baiano (xique-xique)|ba|": {
+    "lat": -12.437852182587525,
+    "lng": -42.13848599749577,
+    "fonte": "uf_centroid"
+  },
+  "ifba - instituto federal da bahia (santo amaro)|ba|": {
+    "lat": -12.9822499,
+    "lng": -38.4812772,
+    "fonte": "nominatim"
+  },
+  "tj-ba - tribunal de justica da bahia (delegacoes)|ba|": {
+    "lat": -12.9470732,
+    "lng": -38.4336688,
+    "fonte": "nominatim"
+  },
+  "tj-ba - tribunal de justica da bahia (juiz substituto)|ba|": {
+    "lat": -12.9465993,
+    "lng": -38.4337611,
+    "fonte": "nominatim"
+  },
+  "cau/ce - conselho de arquitetura e urbanismo do ceara|ce|": {
+    "lat": -5.561921013451142,
+    "lng": -38.99215489354503,
+    "fonte": "uf_centroid"
+  },
+  "icmbio - parque nacional de ubajara ce|ce|": {
+    "lat": -3.7304512,
+    "lng": -38.5217989,
+    "fonte": "nominatim"
+  },
+  "icmbio - parque nacional de jericoacoara ce|ce|": {
+    "lat": -3.7304512,
+    "lng": -38.5217989,
+    "fonte": "nominatim"
+  },
+  "prefeitura de morada nova (agente de transito)|ce|": {
+    "lat": -5.1076699,
+    "lng": -38.3727852,
+    "fonte": "nominatim"
+  },
+  "seap ma - secretaria de estado de administracao penitenciaria (viana)|ma|": {
+    "lat": -2.5456687,
+    "lng": -44.2528902,
+    "fonte": "nominatim"
+  },
+  "seap ma - secretaria de estado de administracao penitenciaria (porto franco)|ma|": {
+    "lat": -2.5456687,
+    "lng": -44.2528902,
+    "fonte": "nominatim"
+  },
+  "seduc - secretaria de estado da educacao do maranhao|ma|": {
+    "lat": -4.859234228461229,
+    "lng": -45.21040968829202,
+    "fonte": "uf_centroid"
+  },
+  "uema - universidade estadual do maranhao (professores magisterio)|ma|": {
+    "lat": -2.498873,
+    "lng": -44.2715939,
+    "fonte": "nominatim"
+  },
+  "uema - universidade estadual do maranhao (substitutos)|ma|": {
+    "lat": -2.498873,
+    "lng": -44.2715939,
+    "fonte": "nominatim"
+  },
+  "ufma - universidade federal do maranhao (prof. substituto)|ma|": {
+    "lat": -5.1113166,
+    "lng": -42.8536321,
+    "fonte": "nominatim"
+  },
+  "fms - fundo municipal de saude de capoeiras|pe|": {
+    "lat": -8.864905010125865,
+    "lng": -36.86216493075037,
+    "fonte": "uf_centroid"
+  },
+  "ifsertaope - if do sertao pernambucano|pe|": {
+    "lat": -8.923625454917111,
+    "lng": -37.0028083971691,
+    "fonte": "uf_centroid"
+  },
+  "icmbio - parque nacional das nascentes do rio parnaiba pi|pi|": {
+    "lat": -5.0874608,
+    "lng": -42.8049571,
+    "fonte": "nominatim"
+  },
+  "icmbio - ngi descoberto brasilia df|df|": {
+    "lat": -15.7939869,
+    "lng": -47.8828,
+    "fonte": "nominatim"
+  },
+  "icmbio - brasilia df (agente ambiental)|df|": {
+    "lat": -15.7939869,
+    "lng": -47.8828,
+    "fonte": "nominatim"
+  },
+  "igesdf - instituto de gestao estrategica de saude do df|df|": {
+    "lat": -15.700547810463174,
+    "lng": -47.875452846326766,
+    "fonte": "uf_centroid"
+  },
+  "icmbio - sao domingos go|go|": {
+    "lat": -16.680882,
+    "lng": -49.2532691,
+    "fonte": "nominatim"
+  },
+  "icmbio - chapada dos veadeiros go|go|": {
+    "lat": -16.680882,
+    "lng": -49.2532691,
+    "fonte": "nominatim"
+  },
+  "icmbio - parque nacional das emas go|go|": {
+    "lat": -16.680882,
+    "lng": -49.2532691,
+    "fonte": "nominatim"
+  },
+  "icmbio - mambai go|go|": {
+    "lat": -16.680882,
+    "lng": -49.2532691,
+    "fonte": "nominatim"
+  },
+  "prefeitura de mambai (agente comunitario)|go|": {
+    "lat": -14.4970828,
+    "lng": -46.1115108,
+    "fonte": "nominatim"
+  },
+  "prefeitura de mambai (varios cargos)|go|": {
+    "lat": -14.4970828,
+    "lng": -46.1115108,
+    "fonte": "nominatim"
+  },
+  "ses - secretaria de estado da saude de goias (fiscal)|go|": {
+    "lat": -15.383836511144507,
+    "lng": -49.75785832004988,
+    "fonte": "uf_centroid"
+  },
+  "ses - secretaria de estado da saude de goias (enfermagem)|go|": {
+    "lat": -15.776485512505296,
+    "lng": -49.87690582541824,
+    "fonte": "uf_centroid"
+  },
+  "icmbio - serra da bodoquena ms|ms|": {
+    "lat": -20.4640173,
+    "lng": -54.6162947,
+    "fonte": "nominatim"
+  },
+  "icmbio - serra das araras mt|mt|": {
+    "lat": -15.5986686,
+    "lng": -56.0991301,
+    "fonte": "nominatim"
+  },
+  "ufmt - universidade federal de mato grosso (professores)|mt|": {
+    "lat": -15.6190403,
+    "lng": -56.109148,
+    "fonte": "nominatim"
+  },
+  "comara - comissao de aeroportos da regiao amazonica|am|": {
+    "lat": -3.892444905875238,
+    "lng": -65.73745827115616,
+    "fonte": "uf_centroid"
+  },
+  "sead - secretaria de estado da administracao do amapa|ap|": {
+    "lat": 1.7219344416535947,
+    "lng": -51.72616047319758,
+    "fonte": "uf_centroid"
+  },
+  "cau/ro - conselho de arquitetura e urbanismo de rondonia|ro|": {
+    "lat": -11.469947334756297,
+    "lng": -63.64100171104915,
+    "fonte": "uf_centroid"
+  },
+  "icmbio - reserva do jaru ro|ro|": {
+    "lat": -8.7494525,
+    "lng": -63.8735438,
+    "fonte": "nominatim"
+  },
+  "icmbio - porto velho ro|ro|": {
+    "lat": -8.7494525,
+    "lng": -63.8735438,
+    "fonte": "nominatim"
+  },
+  "semas - secretaria municipal de assistencia social de iracema|rr|": {
+    "lat": 2.1047005619281216,
+    "lng": -61.266974749367975,
+    "fonte": "uf_centroid"
+  },
+  "ufrr - universidade federal de roraima (professores)|rr|": {
+    "lat": 2.8329953,
+    "lng": -60.6951556,
+    "fonte": "nominatim"
+  },
+  "ufrr - universidade federal de roraima (basico)|rr|": {
+    "lat": 2.8329953,
+    "lng": -60.6951556,
+    "fonte": "nominatim"
+  },
+  "icmbio - parque nacional do araguaia to|to|": {
+    "lat": -10.1837852,
+    "lng": -48.3336423,
+    "fonte": "nominatim"
+  },
+  "marinha do brasil (quadro de apoio a saude)|nacional|": {
+    "lat": -15.962330340673631,
+    "lng": -47.81606735818986,
+    "fonte": "uf_centroid"
+  },
+  "correios - empresa brasileira de correios e telegrafos|nacional|": {
+    "lat": -15.833988253042527,
+    "lng": -48.163848815548455,
+    "fonte": "uf_centroid"
+  },
+  "marinha do brasil (magisterio superior e basico)|nacional|": {
+    "lat": -15.918637529623819,
+    "lng": -47.91051576586559,
+    "fonte": "uf_centroid"
+  }
+}

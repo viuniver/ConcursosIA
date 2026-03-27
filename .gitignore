@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Ambiente
+.env
+
+# Artefatos temporários
+skill_extracted/
+pci-concursos-scraper.zip
+logs/
+data/pdfs/
+
+# PDFs baixados (podem ser grandes)
+*.pdf
