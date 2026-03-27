@@ -260,6 +260,31 @@
     }
     .result-count strong { color: #1a73e8; }
 
+    /* Tags semânticas */
+    .sem-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #e8f0fe;
+      color: #1a73e8;
+      border-radius: 12px;
+      padding: 2px 8px 2px 6px;
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .sem-tag-dot {
+      width: 5px; height: 5px;
+      background: #1a73e8;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .sem-label {
+      font-size: 10px;
+      color: #80868b;
+      margin-bottom: 2px;
+    }
+
     /* ── Sidebar toggle (flutuante) ── */
     #toggle-sidebar {
       position: absolute;
@@ -420,13 +445,33 @@
     <div class="sidebar-body">
 
       <div class="filter-group">
-        <div class="filter-label">Cargo</div>
-        <input id="f-cargo" class="filter-input" type="text" placeholder="Ex: médico, engenheiro..." />
+        <div class="filter-label" style="display:flex;align-items:center;gap:6px;">
+          Cargo
+          <span style="background:#e8f0fe;color:#1a73e8;font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px;letter-spacing:.4px;">IA</span>
+        </div>
+        <div style="position:relative;">
+          <input id="f-cargo" class="filter-input" type="text" placeholder="Ex: médico, obras, TI, direito..." style="padding-right:34px;" />
+          <div id="cargo-loading" style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);">
+            <div style="width:14px;height:14px;border:2px solid #e0e0e0;border-top-color:#1a73e8;border-radius:50%;animation:spin .7s linear infinite;"></div>
+          </div>
+        </div>
+        <!-- Tags de expansão semântica -->
+        <div id="semantic-tags" style="display:none;flex-wrap:wrap;gap:4px;margin-top:4px;"></div>
       </div>
 
       <div class="filter-group">
-        <div class="filter-label">Órgão</div>
-        <input id="f-orgao" class="filter-input" type="text" placeholder="Ex: Prefeitura, SAAE..." />
+        <div class="filter-label" style="display:flex;align-items:center;gap:6px;">
+          Órgão
+          <span style="background:#e8f0fe;color:#1a73e8;font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px;letter-spacing:.4px;">IA</span>
+        </div>
+        <div style="position:relative;">
+          <input id="f-orgao" class="filter-input" type="text" placeholder="Ex: prefeitura, SAAE, tribunal..." style="padding-right:34px;" />
+          <div id="orgao-loading" style="display:none;position:absolute;right:10px;top:50%;transform:translateY(-50%);">
+            <div style="width:14px;height:14px;border:2px solid #e0e0e0;border-top-color:#1a73e8;border-radius:50%;animation:spin .7s linear infinite;"></div>
+          </div>
+        </div>
+        <!-- Tags de expansão semântica de órgão -->
+        <div id="semantic-tags-orgao" style="display:none;flex-wrap:wrap;gap:4px;margin-top:4px;"></div>
       </div>
 
       <div class="filter-group">
@@ -694,15 +739,87 @@ function coletarFiltros() {
   };
 }
 
+// ── Busca semântica ───────────────────────────────────────────────────────────
+function mostrarTagsSemanticas(termos, query) {
+  const container = $('semantic-tags');
+  if (!termos || termos.length <= 1) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'flex';
+  container.innerHTML = `
+    <div class="sem-label" style="width:100%;">Buscando por:</div>
+    ${termos.map(t => `
+      <span class="sem-tag">
+        <span class="sem-tag-dot"></span>${t}
+      </span>`).join('')}
+  `;
+}
+
+function limparTagsSemanticas() {
+  const container = $('semantic-tags');
+  container.style.display = 'none';
+  container.innerHTML = '';
+}
+
+function mostrarTagsSemanticasOrgao(termos, query) {
+  const container = $('semantic-tags-orgao');
+  if (!termos || termos.length <= 1) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'flex';
+  container.innerHTML = `
+    <div class="sem-label" style="width:100%;">Buscando por:</div>
+    ${termos.map(t => `
+      <span class="sem-tag">
+        <span class="sem-tag-dot"></span>${t}
+      </span>`).join('')}
+  `;
+}
+
+function limparTagsSemanticasOrgao() {
+  const container = $('semantic-tags-orgao');
+  container.style.display = 'none';
+  container.innerHTML = '';
+}
+
 async function buscarEAtualizar() {
   loading(true);
+  const cargoInput = $('f-cargo');
+  const cargoVal = cargoInput.value.trim();
+
+  // Mostra spinners durante expansão semântica
+  if (cargoVal) $('cargo-loading').style.display = 'block';
+  const orgaoVal = $('f-orgao').value.trim();
+  if (orgaoVal) $('orgao-loading').style.display = 'block';
+
   try {
     const params = Object.entries(coletarFiltros()).filter(([,v]) => v !== '' && v !== null);
     const qs = new URLSearchParams(params);
     const data = await fetch(`/api/vagas?${qs}`).then(r => r.json());
+
+    // Mostra tags semânticas de cargo
+    if (data.busca_semantica) {
+      mostrarTagsSemanticas(data.busca_semantica.termos, data.busca_semantica.query);
+    } else {
+      limparTagsSemanticas();
+    }
+
+    // Mostra tags semânticas de órgão
+    if (data.busca_semantica_orgao) {
+      mostrarTagsSemanticasOrgao(data.busca_semantica_orgao.termos, data.busca_semantica_orgao.query);
+    } else {
+      limparTagsSemanticasOrgao();
+    }
+
     renderizarMapa(data.vagas || []);
   } catch(e) { console.error(e); }
-  finally { loading(false); }
+  finally {
+    loading(false);
+    $('cargo-loading').style.display = 'none';
+    $('orgao-loading').style.display = 'none';
+  }
 }
 
 function limparFiltros() {
@@ -710,6 +827,8 @@ function limparFiltros() {
   $('f-sal-min').value = ''; $('f-sal-max').value = '';
   $('f-vagas-min').value = ''; $('f-so-abertas').checked = false;
   document.querySelectorAll('.check-list input').forEach(el => el.checked = false);
+  limparTagsSemanticas();
+  limparTagsSemanticasOrgao();
   buscarEAtualizar();
 }
 
