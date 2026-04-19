@@ -19,7 +19,12 @@ from pathlib import Path
 from typing import Optional
 
 import requests
-import pdfplumber
+
+try:
+    import pdfplumber
+    _PDFPLUMBER_AVAILABLE = True
+except BaseException:
+    _PDFPLUMBER_AVAILABLE = False
 
 from .config import (
     HEADERS, REQUEST_DELAY, REQUEST_TIMEOUT,
@@ -50,6 +55,9 @@ def _baixar_pdf(url: str, session: requests.Session) -> Optional[bytes]:
 
 def _extrair_texto_pdf(pdf_bytes: bytes) -> str:
     """Extrai texto de bytes de PDF usando pdfplumber."""
+    if not _PDFPLUMBER_AVAILABLE:
+        logger.warning("pdfplumber não disponível; extração de PDF desativada.")
+        return ""
     try:
         texto_paginas = []
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
