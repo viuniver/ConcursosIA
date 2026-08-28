@@ -93,6 +93,19 @@ def _limpar_json(texto: str) -> str:
     return texto.strip()
 
 
+def _parse_json_array(texto: str) -> list:
+    """
+    Extrai o array JSON da resposta, ignorando qualquer texto (explicações,
+    ressalvas) que o modelo às vezes acrescenta antes ou depois do array.
+    """
+    texto_limpo = _limpar_json(texto)
+    inicio = texto_limpo.find('[')
+    if inicio == -1:
+        raise json.JSONDecodeError("Nenhum array JSON encontrado na resposta", texto_limpo, 0)
+    obj, _ = json.JSONDecoder().raw_decode(texto_limpo, inicio)
+    return obj
+
+
 def extrair_vagas_com_claude(
     texto_edital: str,
     orgao: str,
@@ -134,9 +147,7 @@ Extraia todos os cargos/vagas deste edital e retorne o JSON."""
             messages=[{"role": "user", "content": prompt_usuario}],
         )
         conteudo = resposta.content[0].text
-        conteudo_limpo = _limpar_json(conteudo)
-
-        vagas_raw = json.loads(conteudo_limpo)
+        vagas_raw = _parse_json_array(conteudo)
         if not isinstance(vagas_raw, list):
             logger.warning(f"Resposta do Claude não é lista: {type(vagas_raw)}")
             return []
