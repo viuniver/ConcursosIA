@@ -16,6 +16,7 @@ import requests
 import schedule
 
 from .config import DAILY_RUN_HOUR, DAILY_RUN_MINUTE
+from .db import init_db
 from .scraper import buscar_novos_concursos
 from .pdf_extractor import obter_texto_edital
 from .vacancy_parser import extrair_vagas_com_claude, construir_vagas
@@ -33,6 +34,7 @@ logger = logging.getLogger(__name__)
 
 def executar_coleta() -> None:
     """Executa uma rodada completa de coleta: scraping → PDF → parsing → storage."""
+    init_db()
     hoje = date.today()
     logger.info(f"=== Iniciando coleta diária — {hoje} ===")
 

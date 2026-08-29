@@ -16,6 +16,7 @@ from pathlib import Path
 
 from flask import Flask, jsonify, request, send_from_directory
 
+from .db import init_db
 from .geocoder_nominatim import geocodificar_orgao
 from .semantic_search import expandir_query_cargo, expandir_query_orgao
 from .storage import carregar_vagas, stats_vagas
@@ -24,6 +25,7 @@ BASE_DIR = Path(__file__).parent.parent
 TEMPLATES_DIR = BASE_DIR / "app" / "templates"
 
 app = Flask(__name__, template_folder=str(TEMPLATES_DIR))
+init_db()
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────

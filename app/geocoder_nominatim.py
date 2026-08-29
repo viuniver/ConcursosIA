@@ -2,28 +2,25 @@
 Geocodificador de órgãos públicos via Nominatim (OpenStreetMap).
 
 - Consulta o Nominatim com múltiplas estratégias de query
-- Cache em disco: data/geocode_cache.json
+- Cache no Postgres (tabela geocode_cache)
 - Rate limit: 1 req/s (respeita política do Nominatim)
 - Fallback final: centroide da UF (via geocode.py)
 """
 
-import json
 import re
 import time
 import logging
 import unicodedata
 import threading
-from pathlib import Path
 from typing import Optional
 
 import requests
 
-from .config import DATA_DIR
+from .db import get_conn
 from .geocode import UF_CENTROIDES, _jitter
 
 logger = logging.getLogger(__name__)
 
-CACHE_FILE = DATA_DIR / "geocode_cache.json"
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 NOMINATIM_HEADERS = {
     "User-Agent": "ConcursosIA/1.0 (concursos-publicos-brasil; contact@concursosIA.br)",
@@ -46,48 +43,28 @@ def _cache_key(orgao: str, uf: str, municipio: str) -> str:
     return _normalizar(f"{orgao}|{uf}|{municipio}")
 
 
-# ── Cache em disco ────────────────────────────────────────────────────────────
+# ── Cache no Postgres ─────────────────────────────────────────────────────────
 
-_cache: Optional[dict] = None
 _cache_lock = threading.Lock()
 
 
-def _carregar_cache() -> dict:
-    global _cache
-    with _cache_lock:
-        if _cache is None:
-            if CACHE_FILE.exists():
-                try:
-                    _cache = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-                except Exception:
-                    _cache = {}
-            else:
-                _cache = {}
-        return _cache
-
-
-def _salvar_cache() -> None:
-    with _cache_lock:
-        if _cache is not None:
-            CACHE_FILE.write_text(
-                json.dumps(_cache, ensure_ascii=False, indent=2),
-                encoding="utf-8"
-            )
-
-
 def _set_cache(key: str, lat: float, lng: float, fonte: str) -> None:
-    cache = _carregar_cache()
     with _cache_lock:
-        cache[key] = {"lat": lat, "lng": lng, "fonte": fonte}
-    _salvar_cache()
+        with get_conn() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "INSERT INTO geocode_cache (chave, lat, lng, fonte) VALUES (%s, %s, %s, %s) "
+                    "ON CONFLICT (chave) DO UPDATE SET lat = EXCLUDED.lat, lng = EXCLUDED.lng, fonte = EXCLUDED.fonte",
+                    (key, lat, lng, fonte),
+                )
 
 
 def _get_cache(key: str) -> Optional[tuple[float, float]]:
-    cache = _carregar_cache()
-    entry = cache.get(key)
-    if entry:
-        return entry["lat"], entry["lng"]
-    return None
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute("SELECT lat, lng FROM geocode_cache WHERE chave = %s", (key,))
+            row = cur.fetchone()
+            return (row[0], row[1]) if row else None
 
 
 # ── Extração de cidade do nome do órgão ──────────────────────────────────────

@@ -11,6 +11,9 @@ VAGAS_FILE = DATA_DIR / "vagas.json"
 PROCESSED_FILE = DATA_DIR / "processed_concursos.json"
 PDFS_DIR = DATA_DIR / "pdfs"
 
+# Banco de dados (Postgres — Railway injeta DATABASE_URL automaticamente)
+DATABASE_URL = os.environ.get("DATABASE_URL", "")
+
 # API
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"  # Haiku para custo-benefício no parsing em escala

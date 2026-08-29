@@ -548,11 +548,11 @@ const map = L.map('map', {
   preferCanvas: true,
 });
 
-// Tiles claros CartoDB Positron (visual próximo ao Google Maps)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a> © <a href="https://carto.com">CARTO</a>',
+// Tiles do OpenStreetMap padrão (gratuito, sem necessidade de API key)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
   maxZoom: 19,
-  subdomains: 'abcd',
+  subdomains: 'abc',
 }).addTo(map);
 
 // ── Clusters ──────────────────────────────────────────────────────────────────

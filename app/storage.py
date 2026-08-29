@@ -1,93 +1,82 @@
 """
-Gerenciamento do storage JSON.
+Gerenciamento do storage — Postgres.
 
-vagas.json          — array de vagas individuais (append-only com deduplicação)
-processed_concursos.json — set de IDs de concursos já processados
+vagas               — uma linha por vaga individual (deduplicada por concurso_id + cargo)
+processed_concursos — IDs de concursos já processados
 """
 
-import json
 import logging
-from datetime import date
-from pathlib import Path
-from typing import Optional
 
-from .config import VAGAS_FILE, PROCESSED_FILE, DATA_DIR
+import psycopg2.extras
+
+from .db import get_conn
 from .models import Vaga
 
 logger = logging.getLogger(__name__)
-
-DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def _ler_json(path: Path, default):
-    if path.exists():
-        try:
-            return json.loads(path.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError) as e:
-            logger.warning(f"Erro ao ler {path}: {e} — usando default")
-    return default
-
-
-def _escrever_json(path: Path, data) -> None:
-    path.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
 
 
 # ── Concursos processados ────────────────────────────────────────────────────
 
 def carregar_processados() -> set[str]:
     """Retorna conjunto de IDs de concursos já processados."""
-    data = _ler_json(PROCESSED_FILE, [])
-    return set(data)
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute("SELECT id FROM processed_concursos")
+            return {row[0] for row in cur.fetchall()}
 
 
 def marcar_processado(concurso_id: str) -> None:
-    processados = carregar_processados()
-    processados.add(concurso_id)
-    _escrever_json(PROCESSED_FILE, sorted(processados))
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                "INSERT INTO processed_concursos (id) VALUES (%s) "
+                "ON CONFLICT (id) DO NOTHING",
+                (concurso_id,),
+            )
 
 
 # ── Vagas ────────────────────────────────────────────────────────────────────
 
 def carregar_vagas() -> list[dict]:
-    """Carrega todas as vagas do arquivo JSON."""
-    return _ler_json(VAGAS_FILE, [])
+    """Carrega todas as vagas do banco."""
+    with get_conn() as conn:
+        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+            cur.execute("SELECT dados FROM vagas ORDER BY criado_em")
+            return [row["dados"] for row in cur.fetchall()]
 
 
 def salvar_vagas(vagas: list[Vaga]) -> int:
     """
-    Adiciona novas vagas ao arquivo, evitando duplicatas por (concurso_id + cargo).
+    Adiciona novas vagas, evitando duplicatas por (concurso_id + cargo).
     Retorna o número de vagas efetivamente adicionadas.
     """
-    existentes = carregar_vagas()
+    if not vagas:
+        return 0
 
-    # Índice de deduplicação: (concurso_id, cargo normalizado)
-    chaves_existentes: set[tuple[str, str]] = {
-        (v.get("concurso_id", ""), v.get("cargo", "").lower().strip())
-        for v in existentes
-    }
+    adicionadas = 0
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            for vaga in vagas:
+                cargo_norm = vaga.cargo.lower().strip()
+                cur.execute(
+                    "INSERT INTO vagas (id, concurso_id, cargo_normalizado, dados) "
+                    "VALUES (%s, %s, %s, %s) "
+                    "ON CONFLICT (concurso_id, cargo_normalizado) DO NOTHING",
+                    (vaga.id, vaga.concurso_id, cargo_norm, psycopg2.extras.Json(vaga.to_dict())),
+                )
+                if cur.rowcount:
+                    adicionadas += 1
 
-    novas: list[dict] = []
-    for vaga in vagas:
-        chave = (vaga.concurso_id, vaga.cargo.lower().strip())
-        if chave not in chaves_existentes:
-            chaves_existentes.add(chave)
-            novas.append(vaga.to_dict())
-
-    if novas:
-        existentes.extend(novas)
-        _escrever_json(VAGAS_FILE, existentes)
-        logger.info(f"{len(novas)} novas vagas salvas em {VAGAS_FILE}")
+    if adicionadas:
+        logger.info(f"{adicionadas} novas vagas salvas")
     else:
         logger.info("Nenhuma vaga nova para salvar (todas já existem)")
 
-    return len(novas)
+    return adicionadas
 
 
 def stats_vagas() -> dict:
-    """Retorna estatísticas básicas do arquivo de vagas."""
+    """Retorna estatísticas básicas das vagas."""
     vagas = carregar_vagas()
     if not vagas:
         return {"total": 0}
